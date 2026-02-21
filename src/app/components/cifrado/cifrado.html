@@ -1,0 +1,32 @@
+<form [formGroup]="cifradoForm" class="cifradoForm">
+    <h3>Cifrador</h3>
+    <label>Método de Cifrado</label>
+    <select name="metodo" id="cfd">
+        <option value="1" (click)="toggleN(true)">César</option>
+        <option value="2" (click)="toggleN(false)">Atbash</option>
+    </select>
+    <div style="display: flex; gap: 5px;">
+        <label for=""></label>
+        <input type="number" formControlName="asciiMin" placeholder="Min ASCII (ej. 32)" title="Rango Mínimo">
+        <input type="number" formControlName="asciiMax" placeholder="Max ASCII (ej. 126)" title="Rango Máximo">
+    </div>
+    @if(band){
+        <label>N:</label>
+        <input type="number" formControlName="n">
+    }
+    <input type="text" formControlName="cadena" placeholder="Escribe aquí..." required>
+    <div class="button-group">
+        <button (click)="onSubmit(true)">Cifrar</button>
+        <button (click)="onSubmit(false)">Descifrar</button>
+    </div>
+    
+</form>
+
+@if(resultado){
+    <div class="resultado-container">
+        <h4>Resultado:</h4>
+        <div class="resultado-box">
+            {{ resultado }}
+        </div>
+    </div>
+}

@@ -1,0 +1,91 @@
+.cifradoForm {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #f4f7f6;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+select, input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #2196F3;
+  box-shadow: 0 0 5px rgba(33, 150, 243, 0.3);
+}
+
+.button-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+button:first-child {
+  background-color: #2196F3;
+  color: white;
+}
+
+button:last-child {
+  background-color: #4CAF50;
+  color: white;
+}
+
+button:hover {
+  filter: brightness(90%);
+}
+
+button:disabled {
+  background-color: #ccc;
+}
+
+.resultado-container {
+    margin-top: 20px;
+    padding: 15px;
+    background: #e3f2fd;
+    border-left: 5px solid #2196F3;
+    border-radius: 4px;
+    animation: fadeIn 0.5s ease;
+}
+
+.resultado-box {
+    background: #ffffff;
+    padding: 10px;
+    border: 1px dashed #2196F3;
+    font-family: 'Courier New', Courier, monospace;
+    word-break: break-all;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.btn-copy {
+    margin-top: 10px;
+    background: transparent;
+    color: #2196F3;
+    border: 1px solid #2196F3;
+    font-size: 12px;
+    padding: 5px 10px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
